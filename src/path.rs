@@ -310,9 +310,7 @@ fn arc_to_cubics(
     let cyp = -coef * ry * x1p / rx;
     let cx = cos_p * cxp - sin_p * cyp + (x1 + x2) / 2.0;
     let cy = sin_p * cxp + cos_p * cyp + (y1 + y2) / 2.0;
-    let angle = |ux: f64, uy: f64, vx: f64, vy: f64| {
-        (ux * vy - uy * vx).atan2(ux * vx + uy * vy)
-    };
+    let angle = |ux: f64, uy: f64, vx: f64, vy: f64| (ux * vy - uy * vx).atan2(ux * vx + uy * vy);
     let theta1 = angle(1.0, 0.0, (x1p - cxp) / rx, (y1p - cyp) / ry);
     let mut delta = angle(
         (x1p - cxp) / rx,
