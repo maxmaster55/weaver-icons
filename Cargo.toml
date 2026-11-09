@@ -1,0 +1,24 @@
+[package]
+name = "weaver-icons"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+license = "MIT OR Apache-2.0"
+description = "4,000+ Lucide and Material icons with search, SVG output, path commands and draw-on animation"
+repository = "https://github.com/maxmaster55/weaver-icons"
+keywords = ["icons", "svg", "lucide", "material", "ui"]
+categories = ["gui", "graphics"]
+readme = "README.md"
+exclude = ["tools/", "docs/"]
+
+[features]
+default = ["lucide", "material"]
+# Lucide outline icons (ISC).
+lucide = []
+# Material Icons, filled style (Apache-2.0).
+material = []
+
+[dependencies]
+
+[[example]]
+name = "readme"
